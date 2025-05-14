@@ -1,0 +1,40 @@
+nohup: ignoring input
+ * Serving Flask app 'app'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5009
+ * Running on http://192.168.1.12:5009
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 748-066-915
+149.107.37.134 - - [15/Jul/2024 15:27:50] "POST /vulnerabilitiesJson HTTP/1.1" 200 -
+149.107.37.134 - - [15/Jul/2024 15:27:53] "POST /vulnerabilitiesJson HTTP/1.1" 200 -
+149.107.37.134 - - [15/Jul/2024 15:28:12] "POST /vulnerabilitiesJson HTTP/1.1" 200 -
+160.40.50.123 - - [15/Jul/2024 15:28:15] "POST /vulnerabilitiesJson HTTP/1.1" 200 -
+160.40.50.123 - - [15/Jul/2024 15:28:19] "POST /vulnerabilitiesJson HTTP/1.1" 200 -
+160.40.50.123 - - [15/Jul/2024 15:29:03] "POST /vulnerabilitiesJson HTTP/1.1" 200 -
+160.40.50.123 - - [15/Jul/2024 15:30:26] "POST /vulnerabilitiesJson HTTP/1.1" 200 -
+160.40.50.123 - - [15/Jul/2024 15:30:33] "POST /vulnerabilitiesJson HTTP/1.1" 200 -
+160.40.50.123 - - [15/Jul/2024 15:44:36] "POST /vulnerabilitiesJson HTTP/1.1" 200 -
+160.40.50.123 - - [15/Jul/2024 15:45:03] "POST /vulnerabilitiesJson HTTP/1.1" 200 -
+160.40.50.123 - - [15/Jul/2024 16:27:10] "POST /vulnerabilitiesJson HTTP/1.1" 200 -
+160.40.50.123 - - [15/Jul/2024 16:27:34] "POST /vulnerabilitiesJson HTTP/1.1" 200 -
+160.40.50.123 - - [15/Jul/2024 17:10:40] "POST /vulnerabilitiesJson HTTP/1.1" 200 -
+45.156.129.79 - - [15/Jul/2024 19:33:48] code 400, message Bad request syntax ('acpp\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+45.156.129.79 - - [15/Jul/2024 19:33:48] "acpp\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00" HTTPStatus.BAD_REQUEST -
+45.156.129.75 - - [15/Jul/2024 19:33:49] "GET / HTTP/1.1" 404 -
+160.40.50.123 - - [16/Jul/2024 16:16:43] "POST /vulnerabilitiesJson HTTP/1.1" 200 -
+160.40.50.123 - - [16/Jul/2024 16:27:00] "POST /vulnerabilitiesJson HTTP/1.1" 200 -
+160.40.50.123 - - [16/Jul/2024 16:30:02] "POST /vulnerabilitiesJson HTTP/1.1" 200 -
+34.78.228.189 - - [17/Jul/2024 11:18:25] code 400, message Bad request version ('0.12\x00')
+34.78.228.189 - - [17/Jul/2024 11:18:25] "\x00\x00\x00¤ÿSMBr\x00\x00\x00\x00\x08\x01@\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00@\x06\x00\x00\x01\x00\x00\x81\x00\x02PC NETWORK PROGRAM 1.0\x00\x02MICROSOFT NETWORKS 1.03\x00\x02MICROSOFT NETWORKS 3.0\x00\x02LANMAN1.0\x00\x02LM1.2X002\x00\x02Samba\x00\x02NT LANMAN 1.0\x00\x02NT LM 0.12\x00" HTTPStatus.BAD_REQUEST -
+34.78.228.189 - - [17/Jul/2024 11:18:26] "GET / HTTP/1.0" 404 -
+34.78.228.189 - - [17/Jul/2024 11:21:19] "GET / HTTP/1.0" 404 -
+34.78.228.189 - - [17/Jul/2024 11:21:19] "GET /nmaplowercheck1721204478 HTTP/1.1" 404 -
+34.78.228.189 - - [17/Jul/2024 11:21:19] "GET /evox/about HTTP/1.1" 404 -
+34.78.228.189 - - [17/Jul/2024 11:21:19] "GET /HNAP1 HTTP/1.1" 404 -
+34.78.228.189 - - [17/Jul/2024 11:21:20] "POST /sdk HTTP/1.1" 404 -
+34.78.228.189 - - [17/Jul/2024 11:21:49] "GET / HTTP/1.0" 404 -
+34.78.228.189 - - [17/Jul/2024 11:21:49] "GET / HTTP/1.1" 404 -

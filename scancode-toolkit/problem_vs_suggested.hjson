@@ -1,0 +1,62 @@
+{
+  "Problem Version":
+  {
+    description: This version does not include an API key and may result in rate-limiting or failed requests.
+    code:
+      '''
+
+      def get_remediation_suggestion(cve_id):
+          print(f"Fetching remediation details for CVE {cve_id}")
+          url = f"https://services.nvd.nist.gov/rest/json/cve/1.0/{cve_id}"
+          response = requests.get(url)
+          
+          # Error handling and processing here
+          if response.status_code != 200:
+              print(f"Error: Failed to fetch data for {cve_id}")
+              return "No remediation suggestion available"
+          
+          try:
+              data = response.json()
+              suggestion = data['result']['CVE_Items'][0]['impact']['baseMetricV3']['remediation']
+          except (KeyError, IndexError, json.JSONDecodeError):
+              suggestion = "No remediation suggestion available"
+          
+          return suggestion
+
+      '''
+  }
+  "Suggested Version":
+  {
+    description: This version includes an API key for consistent access and prevents rate-limiting. Also includes retry logic.
+    code:
+      '''
+
+      def get_remediation_suggestion(cve_id):
+          print(f"Fetching remediation details for CVE {cve_id}")
+          url = f"https://services.nvd.nist.gov/rest/json/cve/1.0/{cve_id}"
+          
+          headers = {'apiKey': 'YOUR_NVD_API_KEY'}  # Add your NVD API key here
+          max_retries = 3
+          delay = 2  # Seconds between retries
+
+          for attempt in range(max_retries):
+              response = requests.get(url, headers=headers)
+              print(f"Response Status Code: {response.status_code}")
+
+              if response.status_code == 200:
+                  try:
+                      data = response.json()
+                      suggestion = data['result']['CVE_Items'][0]['impact']['baseMetricV3']['remediation']
+                      return suggestion
+                  except (KeyError, IndexError, json.JSONDecodeError):
+                      print(f"Error decoding JSON for CVE {cve_id}")
+                      return "No remediation suggestion available"
+              else:
+                  print(f"Error: Failed to fetch data for {cve_id}, retrying in {delay} seconds...")
+                  time.sleep(delay)
+
+          return "No remediation suggestion available"
+
+      '''
+  }
+}

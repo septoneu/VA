@@ -1,0 +1,59 @@
+2024-10-04 15:27:50,293 - Encrypted SBOM saved to encrypted_sbom.json
+2024-10-04 15:27:50,294 - HMAC saved to encrypted_sbom_hmac.json
+2024-10-04 15:29:46,571 - Encrypted SBOM saved to encrypted_sbom.json
+2024-10-04 15:29:46,571 - HMAC saved to encrypted_sbom_hmac.json
+2024-10-04 15:30:08,999 - Encrypted SBOM saved to encrypted_sbom.json
+2024-10-04 15:30:08,999 - HMAC saved to encrypted_sbom_hmac.json
+2024-10-04 15:30:09,027 - Backup of encrypted SBOM saved to /backup_location/encrypted_sbom.json
+2024-10-04 15:30:09,027 - HMAC verification successful. The data is intact.
+2024-10-04 15:30:09,028 - Decrypted SBOM saved to decrypted_sbom.json
+2024-10-04 15:30:09,028 - Success! The decrypted file matches the original SBOM.
+2024-10-04 15:30:09,028 - File integrity verified post-transfer.
+2024-10-04 15:30:23,628 - Encrypted SBOM saved to encrypted_sbom.json
+2024-10-04 15:30:23,628 - HMAC saved to encrypted_sbom_hmac.json
+2024-10-04 15:30:23,628 - Backup of encrypted SBOM saved to /backup_location/encrypted_sbom.json
+2024-10-04 15:30:23,628 - HMAC verification successful. The data is intact.
+2024-10-04 15:30:23,628 - Decrypted SBOM saved to decrypted_sbom.json
+2024-10-04 15:30:23,629 - Success! The decrypted file matches the original SBOM.
+2024-10-04 15:30:23,629 - File integrity verified post-transfer.
+2024-10-04 15:30:26,473 - Encrypted SBOM saved to encrypted_sbom.json
+2024-10-04 15:30:26,473 - HMAC saved to encrypted_sbom_hmac.json
+2024-10-04 15:31:56,563 - Encrypted SBOM saved to encrypted_sbom.json
+2024-10-04 15:31:56,563 - HMAC saved to encrypted_sbom_hmac.json
+2024-10-04 15:33:18,256 - Encrypted SBOM saved to encrypted_sbom.json
+2024-10-04 15:33:18,256 - HMAC saved to encrypted_sbom_hmac.json
+2024-10-04 15:34:32,905 - Encrypted SBOM saved to encrypted_sbom.json
+2024-10-04 15:34:32,905 - HMAC saved to encrypted_sbom_hmac.json
+2024-10-04 15:34:32,934 - Backup of encrypted SBOM saved to backup_location/encrypted_sbom.json
+2024-10-04 15:34:32,934 - HMAC verification successful. The data is intact.
+2024-10-04 15:34:32,935 - Decrypted SBOM saved to decrypted_sbom.json
+2024-10-04 15:34:32,935 - Success! The decrypted file matches the original SBOM.
+2024-10-04 15:34:32,935 - File integrity verified post-transfer.
+2024-10-04 15:37:39,151 - Encrypted SBOM saved to encrypted_sbom.json
+2024-10-04 15:37:39,151 - HMAC saved to encrypted_sbom_hmac.json
+2024-10-04 15:37:39,152 - Backup of encrypted SBOM saved to backup_location/encrypted_sbom.json
+2024-10-04 15:37:39,152 - HMAC verification successful. The data is intact.
+2024-10-04 15:37:39,152 - Decrypted SBOM saved to decrypted_sbom.json
+2024-10-04 15:37:39,152 - Success! The decrypted file matches the original SBOM.
+2024-10-04 15:37:39,153 - File integrity verified post-transfer.
+2024-10-04 15:44:21,063 - Compressed scan-result.json to compressed_sbom.zip
+2024-10-04 15:44:21,144 - Encrypted SBOM saved to encrypted_sbom.json
+2024-10-04 15:44:21,144 - HMAC saved to encrypted_sbom_hmac.json
+2024-10-04 15:44:21,144 - Encrypted metadata saved to encrypted_metadata.json
+2024-10-04 15:44:21,145 - Backup of encrypted SBOM saved to backup_location/encrypted_sbom.json
+2024-10-04 15:44:21,145 - HMAC verification successful. The data is intact.
+2024-10-04 15:44:21,145 - Decrypted SBOM saved to decrypted_sbom.zip
+2024-10-04 15:44:21,145 - Success! The decrypted file matches the original SBOM.
+2024-10-04 15:44:21,145 - File integrity verified post-transfer.
+2024-10-04 15:48:33,898 - Compressed scan-result.json to compressed_sbom.zip
+2024-10-04 15:48:33,978 - Encrypted SBOM saved to encrypted_sbom.json
+2024-10-04 15:48:33,978 - HMAC saved to encrypted_sbom_hmac.json
+2024-10-04 15:48:33,978 - Digital signature saved to encrypted_sbom_signature.sig
+2024-10-04 15:48:33,978 - Encrypted metadata saved to encrypted_metadata.json
+2024-10-04 15:48:33,979 - Backup of encrypted SBOM saved to backup_location_primary/encrypted_sbom.json and backup_location_secondary/encrypted_sbom.json
+2024-10-04 15:48:33,979 - MFA verification required. Please complete MFA before proceeding...
+2024-10-04 15:48:34,979 - MFA verification successful.
+2024-10-04 15:48:34,980 - HMAC verification successful. The data is intact.
+2024-10-04 15:48:34,980 - Decrypted SBOM saved to decrypted_sbom.zip
+2024-10-04 15:48:34,980 - Success! The decrypted file matches the original SBOM.
+2024-10-04 15:48:34,980 - File integrity verified post-transfer at both locations.

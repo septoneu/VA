@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  client_app:
+    build:
+      context: .
+      dockerfile: Dockerfile.client
+    ports:
+      - "5003:5003"
+    environment:
+      - VALID_API_KEY=147cb7aac07e20f0c7690f3d8ea1ce61
+      - TOTP_SECRET=JBSWY3DPEHPK3PXP
+      - JWT_SECRET_KEY=A1B2C3D4E5F6G7H8I9J0KLMNOPQRSTUVWXYZ!@#$%^
+      - CLIENT_ID=septon_project_client
+      - CLIENT_SECRET=SeptonClientSecret@2024!
+    depends_on:
+      - manufacturer_server
+
+  manufacturer_server:
+    build:
+      context: .
+      dockerfile: Dockerfile.manufacturer
+    ports:
+      - "5002:5002"  # Expose port 5002 on both container and host
+    environment:
+      - VALID_API_KEY=147cb7aac07e20f0c7690f3d8ea1ce61
+      - TOTP_SECRET=JBSWY3DPEHPK3PXP
+      - JWT_SECRET_KEY=A1B2C3D4E5F6G7H8I9J0KLMNOPQRSTUVWXYZ!@#$%^
+      - CLIENT_ID=septon_project_client
+      - CLIENT_SECRET=SeptonClientSecret@2024!

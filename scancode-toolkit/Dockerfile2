@@ -1,0 +1,36 @@
+# Start from Alpine (lightweight base image)
+FROM alpine:latest
+
+# Install required packages (Python3, pip, curl, jq, unzip, and OpenJDK)
+RUN apk update && apk add --no-cache python3 py3-pip curl jq unzip openjdk11 bash
+
+# Install CycloneDX CLI for SBOM conversion
+RUN curl -L https://github.com/CycloneDX/cyclonedx-cli/releases/download/v0.27.2/cyclonedx-linux-x64 -o /usr/local/bin/cyclonedx && \
+    chmod +x /usr/local/bin/cyclonedx
+
+# Export PATH so CycloneDX is globally available inside the container
+ENV PATH="$PATH:/usr/local/bin"
+
+# Download and install OWASP Dependency-Check
+RUN curl -L https://github.com/jeremylong/DependencyCheck/releases/download/v7.2.1/dependency-check-7.2.1-release.zip -o dc.zip && \
+    unzip dc.zip -d /opt && rm dc.zip
+
+# Set the working directory
+WORKDIR /src
+
+# Create necessary directories
+RUN mkdir -p /src/reports /usr/share/dependency-check/data
+
+# Copy the SBOM file and processing script to the container
+COPY bom.json /src/bom.json
+# COPY process_report.py /src/process_report.py
+
+# Set environment variables
+ENV PATH="/opt/dependency-check/bin:$PATH"
+ENV DC_DATABASE_PATH="/usr/share/dependency-check/data"
+
+# Define CMD to:
+# 1. Convert CycloneDX SBOM JSON to XML
+# 2. Run OWASP Dependency-Check
+CMD ["sh", "-c", "cyclonedx convert --input-format json --output-format xml --input-file /src/bom.json --output-file /src/sbom-deps.xml && \
+    dependency-check.sh --data /usr/share/dependency-check/data --scan /src/sbom-deps.xml --format ALL --out /src/reports"]

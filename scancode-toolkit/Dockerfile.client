@@ -1,0 +1,19 @@
+# Dockerfile.client
+FROM python:3.10-slim
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the application files and necessary folders
+COPY app1.py requirements.txt /app/
+COPY templates /app/templates
+COPY static /app/static
+
+# Install dependencies
+RUN pip install -r requirements.txt
+
+# Expose the port for the client app
+EXPOSE 5003
+
+# Start the Flask app
+CMD ["python", "app1.py"]

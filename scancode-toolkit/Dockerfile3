@@ -1,0 +1,10 @@
+FROM owasp/dependency-check:latest
+
+# Set the working directory inside the container
+WORKDIR /src
+
+# Copy the necessary files to the container
+COPY ./bom.json /src/sbom_converted.json
+
+# Run Dependency-Check with the specified options
+CMD ["dependency-check.sh", "--scan", "/src/sbom_converted.json", "--project", "HS4U", "--format", "ALL", "--out", "/src/reports","--nvdApiKey","e1bce356-9ab0-4910-ba7b-fb10a2427b82"]

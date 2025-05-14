@@ -1,0 +1,359 @@
+ /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Body Styling with Responsive Background Image */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('https://septon-project.eu/wp-content/uploads/2023/01/93472-scaled.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+    overflow: hidden;
+    transition: background 0.5s ease;
+}
+
+/* Overlay to Improve Readability */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+/* Container Styling */
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+/* Top Banner */
+body {
+    padding-top: 70px; /* Adjust this based on the height of the banner */
+}
+
+/* Top Banner */
+/* Top Banner */
+.top-banner {
+    width: 100%;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: fixed; /* Anchor at the top */
+    top: 0;
+    left: 0;
+    z-index: 10; /* Ensures it appears above other content */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Tooltip styling with light grey circle and white exclamation mark */
+.tooltip {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    margin-left: 8px; /* Space between input and icon */
+    border-radius: 50%;
+    background-color: rgba(211, 211, 211, 0.8); /* Light grey background */
+    color: white; /* White exclamation mark */
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    top: -12px; /* Further raise the icon */
+}
+
+/* Tooltip text styling */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    top: -35px; /* Position above the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 14px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* Adjust the font and style for the banner text */
+.top-banner h2 {
+    font-size: 28px; /* Larger font for more emphasis */
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for added depth */
+    letter-spacing: 1px; /* Slightly spaced letters for clarity */
+}
+.top-banner p {
+    margin: 5px 0 0;
+    font-size: 16px;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px 0; /* Reduced height */
+    text-align: center;
+    font-size: 13px; /* Smaller font size */
+    z-index: 10; /* Ensures it appears above the overlay */
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.footer-links li {
+    display: inline;
+}
+
+.footer-links li a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.footer-links li a:hover {
+    text-decoration: underline;
+}
+
+/* Header Styling */
+h1 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-family: 'Arial Black', Gadget, sans-serif;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Label and Input Styling */
+label {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+    text-align: left;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border 0.3s ease, background-color 0.3s ease;
+    background: #f9f9f9;
+    color: #333;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+    background-color: #f0f8ff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
+input[type="text"]::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #0056b3, #004494);
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 91, 187, 0.4);
+}
+
+button:active {
+    transform: scale(0.98);
+    box-shadow: 0 5px 15px rgba(0, 91, 187, 0.3);
+}
+
+/* Messages */
+#response-message {
+    margin-bottom: 20px;
+    color: #dc3545;
+    font-size: 14px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Step Title Styling */
+h2 {
+    font-size: 20px;
+    color: #007bff;
+    margin-bottom: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* Input focus effect */
+input:focus, button:hover {
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+/* Download Button */
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    margin-top: 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+.button:active {
+    transform: translateY(1px);
+}
+
+/* Footer */
+.footer {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #888;
+}
+
+.footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .footer {
+        font-size: 10px;
+    }
+}
+
+/* Background animation */
+body {
+    animation: backgroundAnimation 15s infinite linear;
+}
+
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Enhanced focus for accessibility */
+input:focus, button:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+/* Shadow effect */
+.container {
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Glow effect on hover */
+button:hover, .button:hover {
+    box-shadow: 0 4px 20px rgba(0, 123, 255, 0.4);
+}
+
+/* Stylish placeholder */
+input::placeholder {
+    font-style: italic;
+    color: #aaa;
+    opacity: 0.8;
+} 
